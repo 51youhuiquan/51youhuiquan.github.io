@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>列表页</title>
+  <link href="D:/test/css/tao.css" rel="stylesheet" type="text/css"></link>
+  <script type="text/javascript">
+	(function(doc, win) { // 分辨率Resolution适配
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function() {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				if (clientWidth >= 640) {
+					clientWidth = 640;
+				}
+				docEl.style.fontSize = 100 * (clientWidth / 1080) + 'px';
+			}; // Abort if browser does not support addEventListener
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+		// 一物理像素在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale, 要注释上面的meta标签
+	})(document, window); 
+	</script>
+ </head>
+ <body>
+  	<header class="index">
+		<div class="c-hd">
+			<section class="back">
+				<a href="#"><i></i></a>
+			</section>
+			<section class="hd-search">
+			<form id="searchForm" action="#" method="post" class="box">								
+				<div class="box-flex c-form-search">
+				<em></em>
+				<input type="text" name="q" class="search-form" placeholder="请输入商品名或关键词" value="" autocomplete="off"/>
+				</div>
+				<input type="submit" class="searchbtn" value="搜索"/>				
+			</form>
+			</section>
+		</div>
+	</header>
+	<div class="cate-nav">
+		<div class="mall-cate-box">
+			<ul class="mall-cate">
+				<!--<li class="select"><a href="#">母婴<em></em></a></li>-->
+				<li><a href="#">母婴<em></em></a></li>
+				<li><a href="#">最优<em></em></a></li>
+				<li><a href="#">销量<em></em></a></li>
+				<li><a href="#">筛选<em></em></a></li>
+			</ul>
+		</div>
+		<div class="sort-wrapper">
+			<div class="sort-view sort-screen">
+				<section class="p">
+					<label>价格区间</label>
+					<ul>
+						<li class="current" data-value="0"><s>不限</s></li>
+						<li data-value="1"><s>50元以下</s></li>
+						<li data-value="2"><s>50-100元</s></li>
+						<li data-value="3"><s>100-200元</s></li>
+						<li data-value="4"><s>200元以上</s></li>
+					</ul>
+				</section>
+				<section class="btnbox">
+					<button type="button" class="screen-submit" style="border:0">重置</button>
+					<button type="button" class="screen-submit" style="border:0">确认</button>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class="list-view">
+		<ul class="list-ul">
+			<li>
+				<a href="#">
+					<div class="list-item">
+						<div class="pic">
+							<img></img>
+						</div>
+						<div class="info">
+							<h2 class="title">半身裙指针显瘦</h2>
+							<h3 class="title">时尚百读，显瘦啦啦啦，中长款恩，还是蛮好看的，你说呢，再长点会怎样？</h3>
+							<div class="main">
+								<p class="price"></p>
+								<p class="num bought"></p>
+							</div>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="list-item">
+						<div class="pic">
+							<img></img>
+						</div>
+						<div class="info">
+							<h2 class="title">半身裙指针显瘦</h2>
+							<h3 class="title">时尚百读，显瘦啦啦啦，中长款恩，还是蛮好看的，你说呢，再长点会怎样？</h3>
+							<div class="main">
+								<p class="price"></p>
+								<p class="num bought"></p>
+							</div>
+						</div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div class="list-item">
+						<div class="pic">
+							<img></img>
+						</div>
+						<div class="info">
+							<h2 class="title">半身裙指针显瘦</h2>
+							<h3 class="title">时尚百读，显瘦啦啦啦，中长款恩，还是蛮好看的，你说呢，再长点会怎样？</h3>
+							<div class="main">
+								<p class="price"></p>
+								<p class="num bought"></p>
+							</div>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+ </body>
+</html>

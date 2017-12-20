@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>商品详情</title>
+ </head>
+ <body>
+	<style>
+	body{max-width: 640px;margin: 0 auto;height: 100%;position: relative;font-size:.38rem;background-color: #f2f4f8}
+	a{color: #6e7d8b;text-decoration: none;outline: 0;}
+	em,i,li{font-style:normal;list-style:none}
+	h1,ul{margin:0;padding:0}
+	header.index{height: 1.2rem;background: #0ecac7;position: relative;}
+	.c-hd{height:1.2rem;position: relative;display:-webkit-flex;width:100%}
+	.c-hd section:first-child {min-width: 1.09rem;}
+	.c-hd section:last-child {min-width: 1.36rem;text-align: right;}
+	.c-hd section:nth-child(2) {text-align: center;-webkit-box-flex: 1;-moz-box-flex: 1;font-size: .44rem;color: #333;}
+	.c-hd section.hd-title {color: #fff;line-height: 1.2rem;}
+	.c-hd section.hd-nav a, .c-hd .hd-home a {padding: .30rem .2rem;display: inline-block;line-height: 100%;}
+	.c-hd .hd-home {position: absolute;top: 0;right: 0;}
+	.c-hd section.back a {display: inline-block;line-height: .63rem;padding: .3rem .27rem;position:relative;}
+	.c-hd .hd-home a i, .c-hd section.back a i {background: url(img/icon_hd3.png) no-repeat;background-size: .55rem auto;width: .55rem;height: .55rem;display: inline-block;}
+	.c-hd section.back a i {background-position: 0 -1.08rem;}
+	.c-hd .hd-home a.home i {background-position: 0 -1.67rem;}
+	.content .section-detailbox {background: #fff;margin-bottom: .2rem;}
+	.deal-pic{position:relative}
+	.section-detailbox .deal-pic img {vertical-align: top;width: 100%;}	
+	.deal-pic .info {position: absolute;bottom: 0;width: 100%;color: #fff;padding: .14rem 1.9rem .14rem .28rem;font-size: .33rem;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;background-image: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.2) 20%,rgba(0,0,0,.6) 100%);}
+	.deal-pic .info h1 {color: #fff;font-size: .44rem;font-weight: normal;text-align: left;padding-bottom: .14rem;width: 100%;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+	.deal-pic .info h3{font-size:.33rem;font-weight:normal}
+	.deal-pic .edit {position: absolute;right: -.1rem;bottom: .39rem;width: 1.93rem;}
+	.deal-pic .edit a {padding-right: .14rem;display: inline-block;line-height: 100%;}
+	.arrowside-fun .ml-fx,.arrowside-fun .ml-coll{background: url(img/detail_side.png) no-repeat;background-size: .63rem auto;width: .63rem;height: .63rem;display: block;text-indent: -999em;}
+	.arrowside-fun .ml-coll {background-position: 0 -1.25rem;}
+	.arrowside-fun .ml-fx {background-position: 0 -2.53rem;}
+	.box,.buybox,.tj-list{display:-webkit-flex;width:100%;box-sizing:border-box;justify-content:space-between}
+	.section-detailbox section.deal-other {padding: .14rem .41rem 0;border-bottom: 1px solid #cfcfcf;}
+	.oh-ul li,.buybox .price{-webkit-box-flex:1;display:block}
+	.oh-ul li {margin-bottom: .14rem;font-size: .38rem;color: #989898;position: relative;padding-left: .55rem;}
+	.oh-ul li span {width: .44rem;height: .44rem;}
+	.oh-ul li span{background: url(img/detail_refund.png) no-repeat;background-size: 100%;position: absolute;left: 0;top: 0;}
+	.oh-ul li span.oh-num{background-position:0 -.46rem}
+	.section-detailbox section.title {border-bottom: .027rem solid #ebebeb;padding: .38rem .55rem;}
+	.section-detailbox h2 {font-size: .44rem;color: #3c3c3c;position: relative;}
+	.section-detailbox section.deal-site {padding: .22rem;position: relative;}
+	.section-detailbox section.deal-site ul li label{padding:0rem 0.12rem;color:#f53c3c}
+	.oh-ul li.deal-price{padding-left:0}
+	.native-price{color:#989898}
+	.tj-price{color: #f53c3c;font-size:.28rem}
+	.tj-price em{font-weight: bold;font-size:.38rem}
+	.tj-list .pic {width: 3.39rem;height: 3.39rem;margin:.05rem;overflow: hidden;}
+	.tj-list .tj-title{text-overflow: ellipsis;overflow: hidden;white-space:nowrap;width:3.37rem}
+	.section-detailbox section.short-desc {color:#989898;margin-top:-.5rem;line-height:200%;border-bottom: .05rem solid #ebebeb;}
+	.buybox{border-bottom: 1px solid #cecece;padding: .22rem .27rem;background: #fff;border-top: 1px solid #c6c6c6;}
+	.buybox .price em {font-size: .55rem;color: #ff601c;font-weight: bold;}
+	.buybox .price del {color: #989898;padding-left: .27rem;}
+	.buybox .btn{background: #ff601c;border: 1px solid #ff601c;border-radius: .14rem;color: #fff;width: auto;line-height: .82rem;}
+	.buybox .btn font{display:block;padding:0 .18rem}
+	.col-title {padding: .2rem;border-bottom: .01rem solid #eee;color: #333;text-align: center;background: #fff;}
+	.col-title span {font-size: .42rem;color: #ff4f00;}	
+	</style>
+	<script type="text/javascript">
+	(function(doc, win) { // 分辨率Resolution适配
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function() {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				if (clientWidth >= 640) {
+					clientWidth = 640;
+				}
+				docEl.style.fontSize = 100 * (clientWidth / 1080) + 'px';
+			}; // Abort if browser does not support addEventListener
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+		// 一物理像素在不同屏幕的显示效果不一样。要根据devicePixelRatio来修改meta标签的scale, 要注释上面的meta标签
+	})(document, window); 
+	</script>
+	<header class="index">		
+		<div class="c-hd">
+			<section class="back"><a href="javascript:history.go(-1)"><i></i></a></section>
+			<section class="hd-title">商品详情</section>
+			<section class="hd-nav">
+				<div class="hd-home">
+					<a href="#" class="my"><i></i></a>
+					<a href="#" class="home"><i></i></a>
+				</div>
+			</section>
+		</div>
+	</header>
+	<div class="content">
+		<div class="section-detailbox">
+			<section class="deal-pic">
+				<img src="https://d1.lashouimg.com/cms/M00/CD/1B/CqgBJlVSq4GAME9fAACehNOHKrw729.jpg" original="https://d1.lashouimg.com/cms/M00/CD/1B/CqgBJlVSq4GAME9fAACehNOHKrw729.jpg" alt="春季护理套系，6选3">
+				<div class="info">
+					<h1>您很哼哼唧唧</h1>
+					<h3>春季护理套系，哈哈</h3>
+				</div>
+				<div class="edit">
+					<a title="收藏" class="arrowside-fun" href="javascript:void(0)"><label><span class="ml-coll">收藏</span></label></a>
+					<a href="#" title="分享到" class="arrowside-fun"> <span class="ml-fx">分享到</span> </a>
+				</div>
+			</section>			
+			<section class="deal-other">
+				<ul class="box oh-ul">
+					<li class="oh-in"><span class="ok"></span>包邮</li>
+					<li class><span class="not-ok"></span>券</li>
+					<li><span class="oh-num"></span>销量 2556</li>
+				</ul>	
+			</section>
+		</div>		
+		<div class="section-detailbox">
+			<section class="title">
+				<h2>推荐理由</h2>				
+			</section>
+			<section class="deal-site">
+				<ul class="oh-ul box">
+						<li class="deal-price"><label>券后价</label><label>60</label></li>				
+						<!--<li class="deal-price"><label>返现价</label><label>0.5</label></li>-->
+						<li class="deal-price"><label style="color:#989898">在售价</label><label><del class="native-price">65</del></label></li>				
+				</ul>
+			</section>
+			<section class="deal-site short-desc">
+				<p>保暖百搭，版式新颖，显高显瘦，质量杠杠的，大家都说好，卖家强烈推荐</p>
+				<p><a href="#">商品图文详情点击展开>>></a></p>
+			</section>
+		</div>
+		<div class="section-detailbox">
+			<section class="col-title">
+				<span>看.了.又.看</span>
+			</section>
+			<section class="box">
+				<ul class="tj-list">
+					<li>
+						<a href="#">
+							<img src="https://d1.lashouimg.com/cms/M00/F1/CC/CqgBHlYDuOGAdIfUAAC4GoZyF50805-440x280.jpg"  class="pic"></a>
+							<p class="tj-title">夹棉儿童打底裤</p>
+							<p class="box"><span class="tj-price">￥<em>140</em></span><span class="native-price">5人已买</span></p>
+						</a>						
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://d1.lashouimg.com/cms/M00/F1/CC/CqgBHlYDuOGAdIfUAAC4GoZyF50805-440x280.jpg"  class="pic"></a>
+							<p class="tj-title">夹棉儿童打底裤</p>
+							<p class="box"><span class="tj-price">￥<em>140</em></span><span class="native-price">5人已买</span></p>
+						</a>						
+					</li>
+					<li>
+						<a href="#">
+							<img src="https://d1.lashouimg.com/cms/M00/F1/CC/CqgBHlYDuOGAdIfUAAC4GoZyF50805-440x280.jpg"  class="pic"></a>
+							<p class="tj-title">三层加厚夹棉儿童女童打底裤</p>
+							<p class="box"><span class="tj-price">￥<em>140.69</em></span><span class="native-price">1115人已买</span></p>
+						</a>						
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="buybox">
+			<span class="price">
+				<em>￥60</em>
+				<del>￥65</del>
+			</span>
+			<a href="#" class="btn"><font>立即购买</font></a>
+		</div>
+		
+	</div>
+ </body>
+</html>
